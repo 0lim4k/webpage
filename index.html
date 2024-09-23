@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de IP V4</h1>
+        <form id="ipForm">
+            <label for="ip">Dirección IP (formato X.X.X.X):</label>
+            <input type="text" id="ip" placeholder="192.168.0.1" required>
+
+            <label for="mask">Máscara de red (en formato X.X.X.X):</label>
+            <input type="text" id="mask" placeholder="/24 o 255.255.255.0" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="result">
+            <h2>Resultados:</h2>
+            <p><strong>IP de Red:</strong> <span id="networkIP"></span></p>
+            <p><strong>IP de Broadcast:</strong> <span id="broadcastIP"></span></p>
+            <p><strong>Cantidad de IP útiles:</strong> <span id="hostCount"></span></p>
+            <p><strong>Rango de IP útiles:</strong> <span id="usableRange"></span></p>
+            <p><strong>Clase de IP:</strong> <span id="ipClass"></span></p>
+            <p><strong>Tipo de IP (Pública/Privada):</strong> <span id="ipType"></span></p>
+
+            <h2>Representación Binaria:</h2>
+            <p id="binaryRepresentation"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
